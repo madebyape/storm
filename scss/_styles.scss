@@ -1,0 +1,362 @@
+//--------------------GENERIC--------------------//
+.section-pad-lrg{
+	padding-top: 8rem;
+	padding-bottom: 8rem;
+	
+}
+.section-pad-med{
+	padding-top: 4rem;
+	padding-bottom: 4rem;
+	
+}
+.section-pad-sma{
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	
+}
+.section-overlay{
+	width:100%;
+	height:100%;
+	background-color: $black;
+	opacity: 0.7;
+	display:block;
+	position: absolute;
+	z-index: 2;
+	top:0;
+}
+.button.round{
+	border-radius:100px;
+}
+
+h1,h2,h3,h4,h5{
+	letter-spacing:$header-letter-spacing;
+}
+.masthead{
+	padding: 20px;
+	.logo{
+	margin: 0 auto;
+	display: block;
+	}
+	h1{
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 1.6rem;
+	}
+}
+.video-hero{
+	position: relative;
+	width:100%;
+	margin:0 auto;
+	//background: url(../images/KMC6.jpg) no-repeat;
+ 	//background-size: cover;
+
+	.hero-text{
+		z-index:10;
+		@include horizontal-vertical-align();
+	    position: absolute;
+	    text-align: center;
+	    color: #FFF;
+
+	    h2{
+			font-size: 3rem;
+	    }
+	    p{
+	    	font-size: 1.4rem;
+	    }
+	    a.play-video{
+	    	opacity: 0.5;
+			transition: all 1s;
+	    }
+		a.play-video:hover{
+	    	opacity: 1;
+	    }
+	}
+
+}
+
+#trailerVideoPlayer{
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    //transform: translateX(-50%) translateY(-50%);
+}
+
+span.storm{
+	color:$pc-blue;
+	font-weight: bold;
+	font-style: italic;
+}
+
+//--------------------WHAT IS STORM--------------------//
+.what-is-storm-section{
+	
+	h2{
+		text-align: center;
+	}
+	a.button {
+		display: block;
+    	width: 18rem;
+    	margin: 0 auto;
+    	font-size: 1.6rem;
+	}
+	p{
+		font-size: 1.2rem;
+		padding: 0 1rem;
+	}
+}
+
+//--------------------TESTIMONIAL--------------------//
+.testimonial-section{
+	position: relative;
+	background-image: url(../images/KMC6.jpg);
+	@include background-image();
+	background-color: $black;
+	blockquote{
+	position: relative;
+	z-index: 10;
+		//@include vertical-align();
+		display: block;
+		color: $white;
+		font-size: 2.4rem;
+		line-height: 1.3;
+
+		cite{
+			font-size: 1.5rem;
+		}
+	}
+}
+
+
+//--------------------CASE STUDY--------------------//
+.fifty-fifty{
+	width:50%;
+	float:left;
+}
+.fifty-text{
+	padding: 4rem;
+	p{
+		font-size: 1.2rem;
+
+	}
+}
+.fifty-images{
+	
+}
+
+//--------------------GET INVOLVED--------------------//
+.getinvolved-section{
+	position: relative;
+	background-image: url(../images/KMC10.jpg);
+	@include background-image();
+	background-color: $black;
+	.overlay-text{
+		color: $white;
+		position: relative;
+		z-index: 10;
+		h2{
+		text-align: center;
+	}
+	}
+	h3{
+		padding-left: 1rem;
+	}
+	p{
+		font-size: 1.2rem;
+		padding: 0 1rem;
+	} 
+}
+
+
+//--------------------FOOTER--------------------//
+.footer {
+  background-color: $black;
+  text-align: center;
+  //font-size: 1.2rem;
+  padding: 4rem;
+  
+  .inline-list a {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background-color: #33383b;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+    line-height: 35px;
+    margin: 0 3px 0 0;
+  }
+  
+  .contact {
+    list-style-type: none;
+    margin: 0;
+    text-align: left;
+    color: #fff;
+    
+    li {
+      margin-bottom: 2rem;
+      
+      p {
+        padding-left: 5rem;
+      }
+    }
+    
+    i {
+      position: absolute;
+      background-color: #33383b;
+      color: #fff;
+      font-size: 1.5rem;
+      border-radius: 50%;
+      line-height: 1;
+      margin: 0 0 0 -4rem;
+      vertical-align: middle;
+      padding: .25em .45em;
+    }
+  }
+  
+  .copywrite {
+    color: $medium-gray;
+    font-size: 0.875rem;
+    margin: 0 0 1rem 0;
+  }
+  
+  .about {
+    color: $medium-gray;
+    font-size: 0.875rem;
+    margin: 0 0 1rem 0;
+  }
+  
+  .footer-links a {
+    list-style: none;
+    font-weight: normal;
+    color: #fff;
+    padding: 3rem 0 2rem;
+    margin: 0;
+    font-size: 0.875rem;
+    
+    &::after {
+      content: "•";
+      padding: 0 0.2rem 0 0.4rem;
+    }
+    
+    &:last-child::after {
+      content: "";
+      padding: 0 0.4rem 0 0.8rem;
+    }
+  }
+  
+  @media only screen and (min-width: 40.063em) {
+    
+    p {
+      text-align: left;
+    }
+    
+    .social {
+      text-align: left;
+      margin: 0;
+    }
+    
+    .contact {
+      text-align: left;
+      > i {
+        margin-right: 1rem;
+      }
+    }
+    
+  }
+}
+   
+.logo {
+  color: #fff;
+  font-size: 1.5rem;
+  
+  i {
+    margin-right: 0.5rem;
+  }
+}
+
+	
+
+//--------------------PAYPAL MODAL--------------------//
+.paypalreveal{
+	padding: 2.8rem!important;
+	text-align: center;
+
+	.paypalform{
+    display: block;
+    width: 180px;
+	margin: 0 auto;
+	}
+}
+
+
+//--------------------VIDEO MODAL--------------------//
+#videomodal{
+	//@include reveal-modal-fullscreen;
+	// @include reveal-overlay-background($black);
+	background-color: $black;
+	@include reveal-modal-width(60%, 760px);
+
+}
+
+
+
+//--------------------ARTICLE PAGE--------------------//
+.article-hero{
+	position: relative;
+	//background-image: url(../images/KMC6.jpg);
+	@include background-image();
+	text-align: center;
+	color:$white;
+	background-repeat:no-repeat;
+	//background-color: $black;
+	.hero-text{
+		//width: 400px;
+		p{
+			font-size: 1.4rem;
+		}
+		@include horizontal-vertical-align();
+		position: absolute;
+		}
+		height: 300px;
+		@media #{$medium-up} {
+			height:600px;
+		}
+		@media #{$large-up} {
+			height:800px;
+		}
+
+}
+
+
+p.intro{
+		font-size: 1.4rem;
+	}
+
+//--------------------ARTICLE PAGE--------------------//
+.donate-section{
+	background-color: $black;
+	text-align: center;
+
+		a.button {
+		display: block;
+    	width: 18rem;
+    	margin: 0 auto;
+    	font-size: 1.6rem;
+		}
+    	p{
+    		color: $white;
+    		font-size: 1.2rem;
+    	}
+}
+
+
+
+
+
+
+
+
+
